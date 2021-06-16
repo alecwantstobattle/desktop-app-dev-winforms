@@ -50,7 +50,8 @@ namespace myFirstApp
             // 
             // countriesDropdown
             // 
-            this.countriesDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.countriesDropdown.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.countriesDropdown.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.countriesDropdown.FormattingEnabled = true;
             this.countriesDropdown.Items.AddRange(new object[] {
             "Pakistan",
@@ -104,14 +105,15 @@ namespace myFirstApp
             // 
             this.itemListbox.FormattingEnabled = true;
             this.itemListbox.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D"});
+            "Pakistan",
+            "China",
+            "Canada",
+            "Iran"});
             this.itemListbox.Location = new System.Drawing.Point(15, 163);
             this.itemListbox.Name = "itemListbox";
             this.itemListbox.Size = new System.Drawing.Size(219, 95);
             this.itemListbox.TabIndex = 5;
+            this.itemListbox.Visible = false;
             // 
             // addButton
             // 
@@ -127,7 +129,7 @@ namespace myFirstApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(250, 129);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.itemListbox);
             this.Controls.Add(this.showButton);
