@@ -16,7 +16,7 @@ namespace myFirstApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MaskedTextBox());
+            Application.Run(new MyBrowser());
         }
     }
 }
