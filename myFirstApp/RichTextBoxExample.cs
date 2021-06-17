@@ -42,5 +42,22 @@ namespace myFirstApp
                 
             }
         }
+
+        private void openButton_Click(object sender, EventArgs e)
+        {
+            if (fileNameText.Text != "")
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\" + fileNameText.Text;
+                FileStream filesStream = File.Open(path, FileMode.Open, FileAccess.Read);
+
+                byte[] abc = new byte[100];
+                filesStream.Read(abc, 0, Convert.ToInt32(filesStream.Length));
+
+                foreach (byte i in abc)
+                {
+                    paragraphTextbox.AppendText(Convert.ToChar(i).ToString());
+                }
+            }
+        }
     }
 }
