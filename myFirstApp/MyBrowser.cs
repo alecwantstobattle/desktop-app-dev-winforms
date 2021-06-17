@@ -46,7 +46,6 @@ namespace myFirstApp
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             webBrowser1.GoHome();
-            webBrowser1
         }
     }
 }

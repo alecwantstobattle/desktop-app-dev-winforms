@@ -16,7 +16,7 @@ namespace myFirstApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyBrowser());
+            Application.Run(new RichTextBoxExample());
         }
     }
 }

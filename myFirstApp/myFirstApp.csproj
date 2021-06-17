@@ -90,6 +90,12 @@
     <Compile Include="RadioExample.Designer.cs">
       <DependentUpon>RadioExample.cs</DependentUpon>
     </Compile>
+    <Compile Include="RichTextBoxExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RichTextBoxExample.Designer.cs">
+      <DependentUpon>RichTextBoxExample.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CheckboxExample.resx">
       <DependentUpon>CheckboxExample.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="RadioExample.resx">
       <DependentUpon>RadioExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextBoxExample.resx">
+      <DependentUpon>RichTextBoxExample.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
