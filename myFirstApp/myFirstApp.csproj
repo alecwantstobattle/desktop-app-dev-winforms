@@ -58,6 +58,12 @@
     <Compile Include="ComboExample.Designer.cs">
       <DependentUpon>ComboExample.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatePickerExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatePickerExample.Designer.cs">
+      <DependentUpon>DatePickerExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComboExample.resx">
       <DependentUpon>ComboExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerExample.resx">
+      <DependentUpon>DatePickerExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
