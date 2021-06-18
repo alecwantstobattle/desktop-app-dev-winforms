@@ -88,6 +88,12 @@
     <Compile Include="MaskedTextBox.Designer.cs">
       <DependentUpon>MaskedTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuExample.Designer.cs">
+      <DependentUpon>MenuExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MaskedTextBox.resx">
       <DependentUpon>MaskedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuExample.resx">
+      <DependentUpon>MenuExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyBrowser.resx">
       <DependentUpon>MyBrowser.cs</DependentUpon>
