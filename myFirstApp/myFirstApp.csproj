@@ -64,6 +64,12 @@
     <Compile Include="DatePickerExample.Designer.cs">
       <DependentUpon>DatePickerExample.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="RadioExample.Designer.cs">
       <DependentUpon>RadioExample.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResponsiveControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResponsiveControls.Designer.cs">
+      <DependentUpon>ResponsiveControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="RichTextBoxExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatePickerExample.resx">
       <DependentUpon>DatePickerExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -125,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="RadioExample.resx">
       <DependentUpon>RadioExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResponsiveControls.resx">
+      <DependentUpon>ResponsiveControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RichTextBoxExample.resx">
       <DependentUpon>RichTextBoxExample.cs</DependentUpon>
