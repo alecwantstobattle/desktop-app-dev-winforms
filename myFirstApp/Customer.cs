@@ -21,9 +21,6 @@ namespace myFirstApp
         {
             foreach (Control control in panel.Controls)
             {
-
-                control.
-
                 if (control is TextBox)
                 {
                     TextBox textbox = (TextBox) control;
