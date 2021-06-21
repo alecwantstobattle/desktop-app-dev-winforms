@@ -67,5 +67,12 @@ namespace myFirstApp
                 }
             }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }

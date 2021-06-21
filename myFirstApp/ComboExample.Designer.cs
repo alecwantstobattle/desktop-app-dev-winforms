@@ -37,6 +37,7 @@ namespace myFirstApp
             this.showButton = new System.Windows.Forms.Button();
             this.itemListbox = new System.Windows.Forms.ListBox();
             this.addButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -125,11 +126,22 @@ namespace myFirstApp
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(159, 264);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 10;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // ComboExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(250, 129);
+            this.ClientSize = new System.Drawing.Size(250, 343);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.itemListbox);
             this.Controls.Add(this.showButton);
@@ -155,5 +167,6 @@ namespace myFirstApp
         private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.ListBox itemListbox;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button backButton;
     }
 }

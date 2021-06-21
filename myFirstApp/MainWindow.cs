@@ -83,5 +83,17 @@ namespace myFirstApp
                 num2ErrorLabel.Visible = false;
             }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

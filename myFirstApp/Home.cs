@@ -16,5 +16,39 @@ namespace myFirstApp
         {
             InitializeComponent();
         }
+
+        private void CheckboxButton_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            this.Hide();
+            CheckboxExample checkboxExample = new CheckboxExample();
+            checkboxExample.Show();
+        }
+
+        private void RadioButtonsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RadioExample radioExample = new RadioExample();
+            radioExample.Show();
+        }
+
+        private void ComboBoxButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ComboExample comboExample = new ComboExample();
+            comboExample.Show();
+        }
+
+        private void MainWindowButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

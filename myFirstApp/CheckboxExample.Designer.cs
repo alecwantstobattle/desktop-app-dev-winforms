@@ -38,12 +38,13 @@ namespace myFirstApp
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.billLabel = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +53,7 @@ namespace myFirstApp
             // internetCheckbox
             // 
             this.internetCheckbox.AutoSize = true;
-            this.internetCheckbox.Location = new System.Drawing.Point(16, 30);
+            this.internetCheckbox.Location = new System.Drawing.Point(15, 66);
             this.internetCheckbox.Name = "internetCheckbox";
             this.internetCheckbox.Size = new System.Drawing.Size(83, 17);
             this.internetCheckbox.TabIndex = 1;
@@ -63,7 +64,7 @@ namespace myFirstApp
             // lunchCheckbox
             // 
             this.lunchCheckbox.AutoSize = true;
-            this.lunchCheckbox.Location = new System.Drawing.Point(16, 54);
+            this.lunchCheckbox.Location = new System.Drawing.Point(15, 90);
             this.lunchCheckbox.Name = "lunchCheckbox";
             this.lunchCheckbox.Size = new System.Drawing.Size(77, 17);
             this.lunchCheckbox.TabIndex = 2;
@@ -74,7 +75,7 @@ namespace myFirstApp
             // swimmingCheckbox
             // 
             this.swimmingCheckbox.AutoSize = true;
-            this.swimmingCheckbox.Location = new System.Drawing.Point(16, 101);
+            this.swimmingCheckbox.Location = new System.Drawing.Point(15, 137);
             this.swimmingCheckbox.Name = "swimmingCheckbox";
             this.swimmingCheckbox.Size = new System.Drawing.Size(100, 17);
             this.swimmingCheckbox.TabIndex = 4;
@@ -85,7 +86,7 @@ namespace myFirstApp
             // newspaperCheckbox
             // 
             this.newspaperCheckbox.AutoSize = true;
-            this.newspaperCheckbox.Location = new System.Drawing.Point(16, 77);
+            this.newspaperCheckbox.Location = new System.Drawing.Point(15, 113);
             this.newspaperCheckbox.Name = "newspaperCheckbox";
             this.newspaperCheckbox.Size = new System.Drawing.Size(95, 17);
             this.newspaperCheckbox.TabIndex = 3;
@@ -96,7 +97,7 @@ namespace myFirstApp
             // servicesListbox
             // 
             this.servicesListbox.FormattingEnabled = true;
-            this.servicesListbox.Location = new System.Drawing.Point(128, 30);
+            this.servicesListbox.Location = new System.Drawing.Point(127, 66);
             this.servicesListbox.Name = "servicesListbox";
             this.servicesListbox.Size = new System.Drawing.Size(120, 95);
             this.servicesListbox.TabIndex = 5;
@@ -104,7 +105,7 @@ namespace myFirstApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 13);
+            this.label2.Location = new System.Drawing.Point(124, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 6;
@@ -113,7 +114,7 @@ namespace myFirstApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 132);
+            this.label3.Location = new System.Drawing.Point(127, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 13);
             this.label3.TabIndex = 7;
@@ -122,16 +123,27 @@ namespace myFirstApp
             // billLabel
             // 
             this.billLabel.AutoSize = true;
-            this.billLabel.Location = new System.Drawing.Point(213, 132);
+            this.billLabel.Location = new System.Drawing.Point(212, 168);
             this.billLabel.Name = "billLabel";
             this.billLabel.Size = new System.Drawing.Size(0, 13);
             this.billLabel.TabIndex = 8;
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(13, 13);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 9;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // CheckboxExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(262, 243);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.billLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,5 +171,6 @@ namespace myFirstApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label billLabel;
+        private System.Windows.Forms.Button backButton;
     }
 }

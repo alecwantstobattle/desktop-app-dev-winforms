@@ -16,7 +16,7 @@ namespace myFirstApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuExample());
+            Application.Run(new Home());
         }
     }
 }

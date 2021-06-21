@@ -103,5 +103,12 @@ namespace myFirstApp
             //}
             Calculate(servicesListbox, swimmingCheckbox, 1000, billLabel);
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }

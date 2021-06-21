@@ -31,10 +31,10 @@ namespace myFirstApp
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CheckboxButton = new System.Windows.Forms.Button();
+            this.RadioButtonsButton = new System.Windows.Forms.Button();
+            this.ComboBoxButton = new System.Windows.Forms.Button();
+            this.MainWindowButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -61,63 +61,68 @@ namespace myFirstApp
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(284, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 17);
+            this.label1.Size = new System.Drawing.Size(384, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to My Software";
             // 
-            // button1
+            // CheckboxButton
             // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(17, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "CheckBox";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CheckboxButton.FlatAppearance.BorderSize = 2;
+            this.CheckboxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckboxButton.Location = new System.Drawing.Point(17, 26);
+            this.CheckboxButton.Name = "CheckboxButton";
+            this.CheckboxButton.Size = new System.Drawing.Size(90, 36);
+            this.CheckboxButton.TabIndex = 1;
+            this.CheckboxButton.Text = "CheckBox";
+            this.CheckboxButton.UseVisualStyleBackColor = true;
+            this.CheckboxButton.Click += new System.EventHandler(this.CheckboxButton_Click);
             // 
-            // button2
+            // RadioButtonsButton
             // 
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(17, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Radio Buttons";
-            this.button2.UseVisualStyleBackColor = true;
+            this.RadioButtonsButton.FlatAppearance.BorderSize = 2;
+            this.RadioButtonsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RadioButtonsButton.Location = new System.Drawing.Point(17, 68);
+            this.RadioButtonsButton.Name = "RadioButtonsButton";
+            this.RadioButtonsButton.Size = new System.Drawing.Size(90, 36);
+            this.RadioButtonsButton.TabIndex = 2;
+            this.RadioButtonsButton.Text = "Radio Buttons";
+            this.RadioButtonsButton.UseVisualStyleBackColor = true;
+            this.RadioButtonsButton.Click += new System.EventHandler(this.RadioButtonsButton_Click);
             // 
-            // button3
+            // ComboBoxButton
             // 
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(17, 110);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 36);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Combo Box";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ComboBoxButton.FlatAppearance.BorderSize = 2;
+            this.ComboBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxButton.Location = new System.Drawing.Point(17, 110);
+            this.ComboBoxButton.Name = "ComboBoxButton";
+            this.ComboBoxButton.Size = new System.Drawing.Size(90, 36);
+            this.ComboBoxButton.TabIndex = 3;
+            this.ComboBoxButton.Text = "Combo Box";
+            this.ComboBoxButton.UseVisualStyleBackColor = true;
+            this.ComboBoxButton.Click += new System.EventHandler(this.ComboBoxButton_Click);
             // 
-            // button4
+            // MainWindowButton
             // 
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(17, 152);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(20);
-            this.button4.Size = new System.Drawing.Size(90, 97);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Main Window";
-            this.button4.UseVisualStyleBackColor = true;
+            this.MainWindowButton.FlatAppearance.BorderSize = 2;
+            this.MainWindowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainWindowButton.Location = new System.Drawing.Point(17, 152);
+            this.MainWindowButton.Name = "MainWindowButton";
+            this.MainWindowButton.Padding = new System.Windows.Forms.Padding(20);
+            this.MainWindowButton.Size = new System.Drawing.Size(90, 97);
+            this.MainWindowButton.TabIndex = 4;
+            this.MainWindowButton.Text = "Main Window";
+            this.MainWindowButton.UseVisualStyleBackColor = true;
+            this.MainWindowButton.Click += new System.EventHandler(this.MainWindowButton_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.CheckboxButton);
+            this.panel2.Controls.Add(this.MainWindowButton);
+            this.panel2.Controls.Add(this.RadioButtonsButton);
+            this.panel2.Controls.Add(this.ComboBoxButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 91);
             this.panel2.Name = "panel2";
@@ -180,6 +185,7 @@ namespace myFirstApp
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Home";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -196,10 +202,10 @@ namespace myFirstApp
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button CheckboxButton;
+        private System.Windows.Forms.Button RadioButtonsButton;
+        private System.Windows.Forms.Button ComboBoxButton;
+        private System.Windows.Forms.Button MainWindowButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;

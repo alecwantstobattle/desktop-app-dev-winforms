@@ -38,12 +38,13 @@ namespace myFirstApp
             this.label3 = new System.Windows.Forms.Label();
             this.num1ErrorLabel = new System.Windows.Forms.Label();
             this.num2ErrorLabel = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(131, 124);
+            this.label1.Location = new System.Drawing.Point(9, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 15);
             this.label1.TabIndex = 0;
@@ -52,7 +53,7 @@ namespace myFirstApp
             // num1Text
             // 
             this.num1Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.num1Text.Location = new System.Drawing.Point(134, 143);
+            this.num1Text.Location = new System.Drawing.Point(12, 39);
             this.num1Text.MaxLength = 10;
             this.num1Text.Name = "num1Text";
             this.num1Text.Size = new System.Drawing.Size(225, 23);
@@ -62,7 +63,7 @@ namespace myFirstApp
             // num2Text
             // 
             this.num2Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.num2Text.Location = new System.Drawing.Point(134, 188);
+            this.num2Text.Location = new System.Drawing.Point(12, 84);
             this.num2Text.MaxLength = 10;
             this.num2Text.Name = "num2Text";
             this.num2Text.Size = new System.Drawing.Size(225, 23);
@@ -72,7 +73,7 @@ namespace myFirstApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 169);
+            this.label2.Location = new System.Drawing.Point(9, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 2;
@@ -80,7 +81,7 @@ namespace myFirstApp
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(284, 217);
+            this.addBtn.Location = new System.Drawing.Point(162, 113);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(75, 23);
             this.addBtn.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace myFirstApp
             // resultText
             // 
             this.resultText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.resultText.Location = new System.Drawing.Point(134, 263);
+            this.resultText.Location = new System.Drawing.Point(12, 159);
             this.resultText.Name = "resultText";
             this.resultText.Size = new System.Drawing.Size(225, 23);
             this.resultText.TabIndex = 6;
@@ -99,7 +100,7 @@ namespace myFirstApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 244);
+            this.label3.Location = new System.Drawing.Point(9, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 5;
@@ -109,7 +110,7 @@ namespace myFirstApp
             // 
             this.num1ErrorLabel.AutoSize = true;
             this.num1ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num1ErrorLabel.Location = new System.Drawing.Point(337, 118);
+            this.num1ErrorLabel.Location = new System.Drawing.Point(215, 14);
             this.num1ErrorLabel.Name = "num1ErrorLabel";
             this.num1ErrorLabel.Size = new System.Drawing.Size(29, 37);
             this.num1ErrorLabel.TabIndex = 7;
@@ -120,18 +121,29 @@ namespace myFirstApp
             // 
             this.num2ErrorLabel.AutoSize = true;
             this.num2ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num2ErrorLabel.Location = new System.Drawing.Point(337, 164);
+            this.num2ErrorLabel.Location = new System.Drawing.Point(215, 60);
             this.num2ErrorLabel.Name = "num2ErrorLabel";
             this.num2ErrorLabel.Size = new System.Drawing.Size(29, 37);
             this.num2ErrorLabel.TabIndex = 8;
             this.num2ErrorLabel.Text = "*";
             this.num2ErrorLabel.Visible = false;
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(162, 188);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 10;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.ClientSize = new System.Drawing.Size(255, 226);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.resultText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.addBtn);
@@ -150,6 +162,7 @@ namespace myFirstApp
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Screen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +179,7 @@ namespace myFirstApp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label num1ErrorLabel;
         private System.Windows.Forms.Label num2ErrorLabel;
+        private System.Windows.Forms.Button backButton;
     }
 }
 

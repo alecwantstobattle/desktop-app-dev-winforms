@@ -41,6 +41,13 @@ namespace myFirstApp
             }
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
+
         //private void maleRadioButton_Enter(object sender, EventArgs e)
         //{
         //    MessageBox.Show("Hi I am radio button of type male");

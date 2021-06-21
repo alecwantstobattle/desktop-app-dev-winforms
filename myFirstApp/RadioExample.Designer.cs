@@ -41,6 +41,7 @@ namespace myFirstApp
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.backButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -164,11 +165,22 @@ namespace myFirstApp
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 11;
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(141, 294);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 12;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // RadioExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(230, 337);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.displayLabel);
@@ -201,5 +213,6 @@ namespace myFirstApp
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button backButton;
     }
 }
