@@ -94,6 +94,12 @@
     <Compile Include="MaskedTextBox.Designer.cs">
       <DependentUpon>MaskedTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm.Designer.cs">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MaskedTextBox.resx">
       <DependentUpon>MaskedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm.resx">
+      <DependentUpon>MDIForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuExample.resx">
       <DependentUpon>MenuExample.cs</DependentUpon>

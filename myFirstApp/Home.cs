@@ -19,9 +19,11 @@ namespace myFirstApp
 
         private void CheckboxButton_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            this.Hide();
+            this.Close();
+            
             CheckboxExample checkboxExample = new CheckboxExample();
+            checkboxExample.MdiParent = MDIForm.ActiveForm;
+            checkboxExample.WindowState = FormWindowState.Maximized;
             checkboxExample.Show();
         }
 
@@ -48,7 +50,7 @@ namespace myFirstApp
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            
         }
     }
 }

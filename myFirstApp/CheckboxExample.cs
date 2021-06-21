@@ -106,8 +106,9 @@ namespace myFirstApp
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Home home = new Home();
+            home.MdiParent = MDIForm.ActiveForm;
+            home.WindowState = FormWindowState.Maximized;
             home.Show();
         }
     }
