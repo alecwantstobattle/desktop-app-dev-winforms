@@ -31,9 +31,9 @@ namespace myFirstApp
 
         private void viewUserButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            RetrievalExample retrievalExample = new RetrievalExample();
-            retrievalExample.Show();
+            this.Hide(); 
+            DataGridViewExample dataGridViewExample = new DataGridViewExample();
+            dataGridViewExample.Show();
         }
     }
 }

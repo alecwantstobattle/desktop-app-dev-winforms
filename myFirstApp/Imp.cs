@@ -95,6 +95,41 @@ namespace myFirstApp
             }
         }
 
+        //public void getAllUser(DataGridView dataGridView,
+        public void getAllUser(DataGridView dataGridView,
+            DataGridViewColumn idGridViewColumn,
+            DataGridViewColumn nameGridViewColumn,
+            DataGridViewColumn phoneGridViewColumn,
+            DataGridViewColumn ageGridViewColumn,
+            DataGridViewColumn genderGridViewColumn,
+            DataGridViewColumn statusGridViewColumn
+            )
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("st_getAllData", sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                idGridViewColumn.DataPropertyName = dataTable.Columns["ID"].ToString();
+                nameGridViewColumn.DataPropertyName = dataTable.Columns["Name"].ToString();
+                phoneGridViewColumn.DataPropertyName = dataTable.Columns["Phone"].ToString();
+                ageGridViewColumn.DataPropertyName = dataTable.Columns["Age"].ToString();
+                genderGridViewColumn.DataPropertyName = dataTable.Columns["Gender"].ToString();
+                statusGridViewColumn.DataPropertyName = dataTable.Columns["Status"].ToString();
+
+                dataGridView.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         string[] data = new string[5];
 
         public string[] getUserData(int id)

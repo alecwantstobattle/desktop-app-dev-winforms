@@ -70,6 +70,12 @@
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataGridViewExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGridViewExample.Designer.cs">
+      <DependentUpon>DataGridViewExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatePickerExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGridViewExample.resx">
+      <DependentUpon>DataGridViewExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatePickerExample.resx">
       <DependentUpon>DatePickerExample.cs</DependentUpon>
