@@ -145,6 +145,12 @@
     <Compile Include="ResponsiveControls.Designer.cs">
       <DependentUpon>ResponsiveControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="RetrievalExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrievalExample.Designer.cs">
+      <DependentUpon>RetrievalExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="RichTextBoxExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResponsiveControls.resx">
       <DependentUpon>ResponsiveControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetrievalExample.resx">
+      <DependentUpon>RetrievalExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RichTextBoxExample.resx">
       <DependentUpon>RichTextBoxExample.cs</DependentUpon>

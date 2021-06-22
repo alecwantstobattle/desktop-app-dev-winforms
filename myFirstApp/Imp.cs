@@ -42,5 +42,40 @@ namespace myFirstApp
             }
         }
 
+        string[] data = new string[5];
+
+        public string[] getUserData(int id)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("st_retrieveData", sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@id", id);
+                sqlConnection.Open();
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        data[0] = dataReader["Name"].ToString(); 
+                        data[1] = dataReader["Phone"].ToString(); 
+                        data[2] = dataReader["Age"].ToString(); 
+                        data[3] = dataReader["Gender"].ToString(); 
+                        data[4] = dataReader["Status"].ToString(); 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No data available.");
+                }
+            }
+            catch
+            {
+
+            }
+
+            return data;
+        }
     }
 }

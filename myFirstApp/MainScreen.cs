@@ -28,5 +28,12 @@ namespace myFirstApp
         {
             Application.Exit();
         }
+
+        private void viewUserButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RetrievalExample retrievalExample = new RetrievalExample();
+            retrievalExample.Show();
+        }
     }
 }

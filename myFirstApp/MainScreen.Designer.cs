@@ -118,6 +118,7 @@ namespace myFirstApp
             this.viewUserButton.TabIndex = 2;
             this.viewUserButton.Text = "View User";
             this.viewUserButton.UseVisualStyleBackColor = true;
+            this.viewUserButton.Click += new System.EventHandler(this.viewUserButton_Click);
             // 
             // deleteUserButton
             // 
