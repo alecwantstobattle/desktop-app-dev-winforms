@@ -12,6 +12,8 @@ namespace myFirstApp
 {
     public partial class RetrievalExample : Form
     {
+        Imp imp = new Imp();
+
         public RetrievalExample()
         {
             InitializeComponent();
@@ -21,12 +23,11 @@ namespace myFirstApp
         {
             if (idTextbox.Text != "")
             {
-                Imp imp = new Imp();
                 string [] data = imp.getUserData(Convert.ToInt32(idTextbox.Text));
 
                 nameTextbox.Text = data[0];
-                ageTextbox.Text = data[1];
-                phoneText.Text = data[2];
+                phoneText.Text = data[1];
+                ageTextbox.Text = data[2];
 
                 if (data[3] == "Male")
                 {
@@ -42,6 +43,24 @@ namespace myFirstApp
             else
             {
                 MessageBox.Show("Please enter ID");
+            }
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            Int16 gender = maleRadioButton.Checked ? Convert.ToInt16(1) : Convert.ToInt16(0);
+            Int16 status = statusDropdown.SelectedItem.ToString() == "Active" ? Convert.ToInt16(1) : Convert.ToInt16(0);
+
+            imp.updateUser(Convert.ToInt32(idTextbox.Text), nameTextbox.Text, phoneText.Text, Convert.ToInt16(ageTextbox.Text), gender, status);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Question...", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                imp.deleteUser(Convert.ToInt32(idTextbox.Text));
             }
         }
     }

@@ -45,6 +45,8 @@ namespace myFirstApp
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.fetchButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,8 @@ namespace myFirstApp
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.deleteButton);
+            this.panel2.Controls.Add(this.updateButton);
             this.panel2.Controls.Add(this.fetchButton);
             this.panel2.Controls.Add(this.femaleRadioButton);
             this.panel2.Controls.Add(this.maleRadioButton);
@@ -83,7 +87,7 @@ namespace myFirstApp
             // 
             this.idTextbox.Location = new System.Drawing.Point(9, 69);
             this.idTextbox.Name = "idTextbox";
-            this.idTextbox.Size = new System.Drawing.Size(226, 25);
+            this.idTextbox.Size = new System.Drawing.Size(107, 25);
             this.idTextbox.TabIndex = 3;
             // 
             // label1
@@ -100,7 +104,7 @@ namespace myFirstApp
             // 
             this.femaleRadioButton.AutoSize = true;
             this.femaleRadioButton.ForeColor = System.Drawing.Color.Olive;
-            this.femaleRadioButton.Location = new System.Drawing.Point(71, 262);
+            this.femaleRadioButton.Location = new System.Drawing.Point(71, 308);
             this.femaleRadioButton.Name = "femaleRadioButton";
             this.femaleRadioButton.Size = new System.Drawing.Size(67, 21);
             this.femaleRadioButton.TabIndex = 23;
@@ -112,7 +116,7 @@ namespace myFirstApp
             // 
             this.maleRadioButton.AutoSize = true;
             this.maleRadioButton.ForeColor = System.Drawing.Color.Olive;
-            this.maleRadioButton.Location = new System.Drawing.Point(10, 262);
+            this.maleRadioButton.Location = new System.Drawing.Point(10, 308);
             this.maleRadioButton.Name = "maleRadioButton";
             this.maleRadioButton.Size = new System.Drawing.Size(55, 21);
             this.maleRadioButton.TabIndex = 22;
@@ -124,7 +128,7 @@ namespace myFirstApp
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Olive;
-            this.label7.Location = new System.Drawing.Point(7, 290);
+            this.label7.Location = new System.Drawing.Point(7, 336);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 17);
             this.label7.TabIndex = 21;
@@ -136,7 +140,7 @@ namespace myFirstApp
             this.statusDropdown.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.statusDropdown.Location = new System.Drawing.Point(9, 310);
+            this.statusDropdown.Location = new System.Drawing.Point(9, 356);
             this.statusDropdown.Name = "statusDropdown";
             this.statusDropdown.Size = new System.Drawing.Size(270, 25);
             this.statusDropdown.TabIndex = 20;
@@ -145,7 +149,7 @@ namespace myFirstApp
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Olive;
-            this.label6.Location = new System.Drawing.Point(7, 241);
+            this.label6.Location = new System.Drawing.Point(7, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 19;
@@ -153,7 +157,7 @@ namespace myFirstApp
             // 
             // phoneText
             // 
-            this.phoneText.Location = new System.Drawing.Point(9, 213);
+            this.phoneText.Location = new System.Drawing.Point(9, 259);
             this.phoneText.Name = "phoneText";
             this.phoneText.Size = new System.Drawing.Size(270, 25);
             this.phoneText.TabIndex = 18;
@@ -162,7 +166,7 @@ namespace myFirstApp
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Olive;
-            this.label5.Location = new System.Drawing.Point(6, 193);
+            this.label5.Location = new System.Drawing.Point(6, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 17;
@@ -170,7 +174,7 @@ namespace myFirstApp
             // 
             // ageTextbox
             // 
-            this.ageTextbox.Location = new System.Drawing.Point(9, 165);
+            this.ageTextbox.Location = new System.Drawing.Point(9, 211);
             this.ageTextbox.Name = "ageTextbox";
             this.ageTextbox.Size = new System.Drawing.Size(270, 25);
             this.ageTextbox.TabIndex = 16;
@@ -179,7 +183,7 @@ namespace myFirstApp
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Olive;
-            this.label4.Location = new System.Drawing.Point(6, 145);
+            this.label4.Location = new System.Drawing.Point(6, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 17);
             this.label4.TabIndex = 15;
@@ -187,7 +191,7 @@ namespace myFirstApp
             // 
             // nameTextbox
             // 
-            this.nameTextbox.Location = new System.Drawing.Point(9, 117);
+            this.nameTextbox.Location = new System.Drawing.Point(9, 163);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(270, 25);
             this.nameTextbox.TabIndex = 14;
@@ -196,7 +200,7 @@ namespace myFirstApp
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Olive;
-            this.label3.Location = new System.Drawing.Point(6, 97);
+            this.label3.Location = new System.Drawing.Point(6, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 13;
@@ -206,13 +210,38 @@ namespace myFirstApp
             // 
             this.fetchButton.FlatAppearance.BorderSize = 2;
             this.fetchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fetchButton.Location = new System.Drawing.Point(241, 69);
+            this.fetchButton.Location = new System.Drawing.Point(122, 66);
             this.fetchButton.Name = "fetchButton";
             this.fetchButton.Size = new System.Drawing.Size(75, 32);
             this.fetchButton.TabIndex = 24;
             this.fetchButton.Text = "Fetch";
             this.fetchButton.UseVisualStyleBackColor = true;
             this.fetchButton.Click += new System.EventHandler(this.fetchButton_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.FlatAppearance.BorderSize = 2;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Location = new System.Drawing.Point(203, 66);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 32);
+            this.updateButton.TabIndex = 25;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.deleteButton.FlatAppearance.BorderSize = 2;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Location = new System.Drawing.Point(203, 104);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(75, 32);
+            this.deleteButton.TabIndex = 26;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // RetrievalExample
             // 
@@ -249,5 +278,7 @@ namespace myFirstApp
         private System.Windows.Forms.TextBox nameTextbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button fetchButton;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button deleteButton;
     }
 }

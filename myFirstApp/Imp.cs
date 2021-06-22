@@ -42,6 +42,59 @@ namespace myFirstApp
             }
         }
 
+        public void updateUser(int userID, string name, string phone, Int16 age, Int16 gender, Int16 status)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("st_updateUser", sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@id", userID);
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@phone", phone);
+                command.Parameters.AddWithValue("@age", age);
+                command.Parameters.AddWithValue("@gender", gender);
+                command.Parameters.AddWithValue("@status", status);
+
+                sqlConnection.Open();
+                int rows = command.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    MessageBox.Show(name + " updated successfully into System.");
+                }
+
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void deleteUser(int id)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("st_deleteUser", sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@id", id);
+
+                sqlConnection.Open();
+                int rows = command.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    MessageBox.Show("data deleted successfully from System.");
+                }
+
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         string[] data = new string[5];
 
         public string[] getUserData(int id)
@@ -69,6 +122,8 @@ namespace myFirstApp
                 {
                     MessageBox.Show("No data available.");
                 }
+
+                sqlConnection.Close();
             }
             catch
             {
