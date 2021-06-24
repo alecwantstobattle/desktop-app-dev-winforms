@@ -11,6 +11,7 @@ namespace myFirstApp
 {
     class Imp
     {
+        //private static string connectionString = @"Data Source=.\SQLEXPRESS; Initial Catalog=dadDb; Integrated Security=True;";
         private static string connectionString = @"Data Source=.\SQLEXPRESS; Initial Catalog=dadDb; Integrated Security=True; MultipleActiveResultSets=True";
         public static SqlConnection sqlConnection = new SqlConnection(connectionString);
 
